@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="horizontal"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/road"
+        android:layout_width="match_parent"
+        android:layout_height="454dp"
+        android:layout_marginTop="184dp"
+        android:src="@drawable/road"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_usercar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="105dp"
+        android:src="@drawable/ic_sedan_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/road"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/road" />
+
+    <ImageView
+        android:id="@+id/iv_pccar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:layout_marginBottom="325dp"
+        android:src="@drawable/ic_sport_car"
+        app:layout_constraintBottom_toBottomOf="@+id/road"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/road" />
+
+    <ImageView
+        android:id="@+id/iv_semafore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/traffic_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.380"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_finishline"
+        android:layout_width="wrap_content"
+        android:layout_height="455dp"
+        android:layout_marginTop="184dp"
+        android:src="@drawable/finish_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_semafore"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="RED"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toEndOf="@+id/iv_semafore"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="00"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_semafore"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_timer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/layout_button"
+        android:backgroundTint="@color/red"
+        android:text="Start"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toEndOf="@+id/tv_semafore"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/layout_button"
+        android:backgroundTint="@color/yellow"
+        android:onClick="driveCarAction"
+        android:text="Start"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/road" />
+</androidx.constraintlayout.widget.ConstraintLayout>
